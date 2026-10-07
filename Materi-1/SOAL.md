@@ -73,10 +73,11 @@ Create a virtual firewall to control inbound traffic to your server:
 ### Step 4: Server Setup (Docker & Git Installation)
 Once your instance is in the `Running` state:
 
-1. Connect to your instance via SSH:
-   ```bash
-   ssh -i /path/to/your-key.pem ubuntu@<YOUR_EC2_PUBLIC_IP>
-   ```
+1. Connect to your instance via AWS console:
+   - Select your instance
+   - click connect at the top
+   - choose EC2 Instance connect, then click connect button on the botom
+   
 2. Update package repositories:
    ```bash
    sudo apt-get update && sudo apt-get upgrade -y
