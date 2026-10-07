@@ -48,7 +48,7 @@ Create a virtual firewall to control inbound traffic to your server:
 
 1. Create a Security Group named `yourname-music-app-sg` inside `yourname-vpc`.
 2. Configure **Inbound Rules**:
-   - **SSH:** Port `22` | Source: `My IP` (or `0.0.0.0/0` for testing)
+   - **SSH:** Port `22` | Source: `0.0.0.0/0` (Anywhere IPv4)
    - **HTTP:** Port `80` | Source: `0.0.0.0/0` (Anywhere IPv4)
 3. Keep default **Outbound Rules** (`All traffic` to `0.0.0.0/0`).
 
