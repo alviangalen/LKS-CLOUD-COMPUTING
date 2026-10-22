@@ -48,7 +48,7 @@ Create a virtual firewall to control inbound traffic to your server:
 
 1. Create a Security Group named `yourname-music-app-sg` inside `yourname-vpc`.
 2. Configure **Inbound Rules**:
-   - **SSH:** Port `22` | Source: `My IP` (or `0.0.0.0/0` for testing)
+   - **SSH:** Port `22` | Source: `0.0.0.0/0` (Anywhere IPv4)
    - **HTTP:** Port `80` | Source: `0.0.0.0/0` (Anywhere IPv4)
 3. Keep default **Outbound Rules** (`All traffic` to `0.0.0.0/0`).
 
@@ -73,10 +73,11 @@ Create a virtual firewall to control inbound traffic to your server:
 ### Step 4: Server Setup (Docker & Git Installation)
 Once your instance is in the `Running` state:
 
-1. Connect to your instance via SSH:
-   ```bash
-   ssh -i /path/to/your-key.pem ubuntu@<YOUR_EC2_PUBLIC_IP>
-   ```
+1. Connect to your instance via AWS console:
+   - Select your instance
+   - click connect at the top
+   - choose EC2 Instance connect, then click connect button on the botom
+   
 2. Update package repositories:
    ```bash
    sudo apt-get update && sudo apt-get upgrade -y
